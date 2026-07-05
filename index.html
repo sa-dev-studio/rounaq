@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رونق لتنسيق الحفلات والمناسبات | Rounaq Events</title>
+    <style>
+        :root {
+            --primary-color: #dfbaac; /* Elegant muted rose gold / sand tone */
+            --accent-color: #b58d7d;
+            --text-dark: #2c2523;
+            --text-light: #6e6562;
+            --bg-color: #fbf9f7; /* Very clean soft off-white */
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 35px 24px;
+            box-shadow: 0 10px 40px rgba(44, 37, 35, 0.04);
+            text-align: center;
+        }
+
+        /* Profile Header */
+        .profile-header {
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-color);
+            margin-bottom: 15px;
+            padding: 3px;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Language Switcher */
+        .lang-switch {
+            background: #f2ebe7;
+            color: var(--text-dark);
+            border: none;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-bottom: 25px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Links / Buttons */
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid rgba(223, 186, 172, 0.3);
+        }
+
+        .btn-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        /* Visual Gallery Grid */
+        .gallery-section {
+            text-align: start;
+        }
+
+        .gallery-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 6px;
+            display: inline-block;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: #f2ebe7;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(44, 37, 35, 0.85));
+            color: white;
+            padding: 10px 8px;
+            font-size: 0.8rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* English/LTR Overrides */
+        .ltr {
+            direction: ltr !important;
+        }
+        .ltr .gallery-section {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="main-card">
+    <div class="profile-header">
+        <img src="logo.png" alt="Rounaq Logo" class="profile-img">
+        <h1 id="txt-title">رونق لتنسيق الحفلات</h1>
+        <p class="bio" id="txt-bio">نضفي رونقاً خاصاً لمناسباتكم السعيدة ✨ متميزون في تنسيق الطاولات الحفلات المدرسية، أيام الميلاد، وتجهيز استقبال المواليد بأرقى اللمسات</p>
+    </div>
+    
+    <button class="lang-switch" onclick="toggleLanguage()" id="btn-lang">English</button>
+
+    <div class="links-wrapper">
+        <a href="https://api.whatsapp.com/send/?phone=966506382077&type=phone_number&app_absent=0" target="_blank" class="btn-link btn-primary" id="btn-whatsapp">💬 واتساب </a>
+        <a href="https://www.instagram.com/rounaq_sa?igsh=NG5vbnZoODAyYmE5" target="_blank" class="btn-link" id="btn-insta">📸 إنستغرام </a>
+        <a href="https://www.tiktok.com/@sa.81designer" target="_blank" class="btn-link" id="btn-tiktok">🎵 تيك توك</a>
+        <a href="https://www.snapchat.com/add/sa.81designer?share_id=7oTgrfoGTlqT4jWX5NzTsw&locale=ar_SA" target="_blank" class="btn-link" id="btn-snap">👻 سناب شات </a>
+    </div>
+
+    <div class="gallery-section">
+        <h2 class="gallery-title" id="txt-gallery-title">أعمالنا المميزة 🌸</h2>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="school.jpg" alt="School Events">
+                <div class="gallery-label" id="img-lbl-1">الحفلات المدرسية</div>
+            </div>
+            <div class="gallery-item">
+                <img src="birthday.jpg" alt="Birthdays">
+                <div class="gallery-label" id="img-lbl-2">أيام الميلاد</div>
+            </div>
+            <div class="gallery-item">
+                <img src="tables.jpg" alt="Table Setups">
+                <div class="gallery-label" id="img-lbl-3">تنسيق الطاولات</div>
+            </div>
+            <div class="gallery-item">
+                <img src="flowers.jpg" alt="Floral & Themes">
+                <div class="gallery-label" id="img-lbl-4">تجهيز الزهور</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentLang = 'ar';
+
+    const translations = {
+        ar: {
+            title: "رونق لتنسيق الحفلات",
+            bio: "نضفي رونقاً خاصاً لمناسباتكم السعيدة ✨ متميزون في تنسيق الطاولات الحفلات المدرسية، أيام الميلاد، وتجهيز استقبال المواليد بأرقى اللمسات",
+            whatsapp: "💬 واتساب ",
+            insta: "📸 إنستغرام",
+            tiktok: "🎵 تيك توك",
+            snap: "👻 سناب شات ",
+            galleryTitle: "أعمالنا المميزة 🌸",
+            lbl1: "الحفلات المدرسية",
+            lbl2: "أيام الميلاد",
+            lbl3: "تنسيق الطاولات",
+            lbl4: "تجهيز الزهور",
+            btnLang: "English"
+        },
+        en: {
+            title: "Rounaq Events",
+            bio: "Adding a touch of splendor to your special occasions ✨ Specializing in elegant table setups, school parties, birthdays, and custom gender reveals.",
+            whatsapp: "💬 WhatsApp",
+            insta: "📸 Instagram",
+            tiktok: "🎵 TikTok",
+            snap: "👻  Snapchat",
+            galleryTitle: "Our Portfolios 🌸",
+            lbl1: "School Parties",
+            lbl2: "Birthdays",
+            lbl3: "Table Setups",
+            lbl4: "Florals",
+            btnLang: "العربية"
+        }
+    };
+
+    function toggleLanguage() {
+        const card = document.getElementById('main-card');
+        const html = document.documentElement;
+
+        if (currentLang === 'ar') {
+            currentLang = 'en';
+            html.setAttribute('dir', 'ltr');
+            html.setAttribute('lang', 'en');
+            card.classList.add('ltr');
+        } else {
+            currentLang = 'ar';
+            html.setAttribute('dir', 'rtl');
+            html.setAttribute('lang', 'ar');
+            card.classList.remove('ltr');
+        }
+
+        document.getElementById('txt-title').innerText = translations[currentLang].title;
+        document.getElementById('txt-bio').innerText = translations[currentLang].bio;
+        document.getElementById('btn-whatsapp').innerText = translations[currentLang].whatsapp;
+        document.getElementById('btn-insta').innerText = translations[currentLang].insta;
+        document.getElementById('btn-tiktok').innerText = translations[currentLang].tiktok;
+        document.getElementById('btn-snap').innerText = translations[currentLang].snap;
+        document.getElementById('txt-gallery-title').innerText = translations[currentLang].galleryTitle;
+        document.getElementById('img-lbl-1').innerText = translations[currentLang].lbl1;
+        document.getElementById('img-lbl-2').innerText = translations[currentLang].lbl2;
+        document.getElementById('img-lbl-3').innerText = translations[currentLang].lbl3;
+        document.getElementById('img-lbl-4').innerText = translations[currentLang].lbl4;
+        document.getElementById('btn-lang').innerText = translations[currentLang].btnLang;
+    }
+</script>
+
+</body>
+</html>
